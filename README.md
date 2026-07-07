@@ -1,177 +1,136 @@
-# Traffic-Management-Using-TomTom-API
-AI-based Smart Traffic Management System using TomTom Traffic API, Arduino Nano, Python, IR Sensors, and SIM900A GSM for dynamic signal control, red-light violation detection, SMS alerts, and emergency override.
-# AI Smart Traffic Management System 🚦
+# 🚦 AI Smart Traffic Management System using TomTom API
 
-An AI-powered Smart Traffic Management System that dynamically controls traffic signals using live traffic congestion data from the TomTom Traffic API.
-
-The project is built using Python, Arduino Nano, IR Sensors, and SIM900A GSM.
+An AI-based Smart Traffic Management System that dynamically controls traffic signals using **live traffic data from the TomTom Traffic API**. The system is developed using **Python, Arduino Nano, IR Sensors, and SIM900A GSM**.
 
 ---
 
-## Features
+## 📌 Project Overview
 
-✔ Live Traffic Monitoring using TomTom API
+Traditional traffic signals use fixed timing regardless of traffic conditions. This project uses live traffic information from the **TomTom Traffic API** to adjust signal timing dynamically.
 
-✔ AI-Based Dynamic Green Signal Timing
-
-✔ 4-Way Intelligent Traffic Control
-
-✔ Red Signal Violation Detection
-
-✔ GSM SMS Alert for Traffic Violations
-
-✔ Emergency Override Mode
-
-✔ Emergency SMS Notification
-
-✔ Python-Arduino Serial Communication
+The system also detects **red-light violations** using IR sensors and sends an **SMS alert** using the SIM900A GSM module. An **emergency override** feature immediately turns all traffic lights red and sends an emergency SMS.
 
 ---
 
-## Technologies Used
+## ✨ Features
 
-- Python
-- Arduino Nano
-- TomTom Traffic API
-- SIM900A GSM Module
-- IR Sensors
-- VS Code
-- Arduino IDE
+- 🚦 Dynamic traffic signal timing
+- 🌐 Live TomTom Traffic API integration
+- 🧠 AI-based congestion calculation
+- 🚗 Red-light violation detection
+- 📩 SMS alerts using SIM900A GSM
+- 🚨 Emergency override mode
+- 🔄 Python–Arduino serial communication
+- 💻 Real-time monitoring
 
 ---
 
-## Hardware
+## 🛠 Hardware Used
 
 - Arduino Nano
 - SIM900A GSM Module
 - 4 IR Sensors
-- LEDs
-- Push Button
-- USB Cable
+- Red & Green LEDs
+- Push Button (Emergency)
+- Breadboard
+- Jumper Wires
 - Laptop
 
 ---
 
-## Software
+## 💻 Software Used
 
-Python
-
-Arduino IDE
-
-VS Code
-
-TomTom Developer API
+- Python
+- Arduino IDE
+- Visual Studio Code
+- TomTom Traffic API
 
 ---
 
-## Project Architecture
+## 🔌 Pin Connections
 
-TomTom API
-
-↓
-
-Python
-
-↓
-
-USB Serial
-
-↓
-
-Arduino Nano
-
-↓
-
-Traffic Signals
-
-↓
-
-IR Sensors
-
-↓
-
-SIM900A GSM
-
-↓
-
-SMS Alert
+| Device | Arduino Pin |
+|---------|-------------|
+| Lane 1 Red | D2 |
+| Lane 1 Green | D3 |
+| Lane 2 Red | D4 |
+| Lane 2 Green | D5 |
+| Lane 3 Red | D6 |
+| Lane 3 Green | D7 |
+| Lane 4 Red | D8 |
+| Lane 4 Green | D9 |
+| SIM900A TX | D10 |
+| SIM900A RX | D11 |
+| Emergency Button | D12 |
+| IR Sensor 1 | A0 |
+| IR Sensor 2 | A1 |
+| IR Sensor 3 | A2 |
+| IR Sensor 4 | A3 |
 
 ---
 
-## Pin Connections
+## ⚙️ Working Principle
 
-Lane 1 RED → D2
-
-Lane 1 GREEN → D3
-
-Lane 2 RED → D4
-
-Lane 2 GREEN → D5
-
-Lane 3 RED → D6
-
-Lane 3 GREEN → D7
-
-Lane 4 RED → D8
-
-Lane 4 GREEN → D9
-
-SIM900A TX → D10
-
-SIM900A RX → D11
-
-Emergency Button → D12
-
-IR Sensors → A0-A3
+1. Python fetches live traffic data from the TomTom API.
+2. Congestion is calculated for each lane.
+3. Python sends congestion values to the Arduino.
+4. Arduino adjusts green signal timing dynamically.
+5. IR sensors detect vehicles crossing on a red signal.
+6. SIM900A sends an SMS alert when a violation occurs.
+7. Pressing the emergency button turns all lights red and sends an emergency SMS.
 
 ---
 
-## Python
+## 📷 Project Images
 
-Install packages
+### Working Model
 
-pip install -r requirements.txt
+![Working Model](Images/WORKING_MODEL_IMAGE.jpeg)
 
-Run
+### SMS Alert
 
+![SMS Output](Images/SMS_OUTPUT.jpeg)
+
+---
+
+## ▶️ Demo Video
+
+See the demo in the **Videos** folder of this repository.
+
+---
+
+## 📦 Python Libraries
+
+Install the required packages:
+
+```bash
+pip install requests pyserial
+```
+
+---
+
+## ▶️ Run the Python Program
+
+```bash
 python version_1.py
+```
 
 ---
 
-## Output
+## 🚀 Future Improvements
 
-Dynamic Traffic Signals
-
-SMS Alert for Red Signal Violation
-
-Emergency Override
-
-Emergency SMS
+- Camera-based vehicle detection
+- Automatic number plate recognition (ANPR)
+- Cloud database integration
+- Mobile application
+- AI-based traffic prediction
 
 ---
 
-## Future Scope
+## 👨‍💻 Author
 
-Camera-based Vehicle Detection
+**Panniru Phanidhar**
 
-Number Plate Recognition
-
-Cloud Database
-
-Mobile Application
-
-IoT Dashboard
-
-Machine Learning Based Prediction
-
----
-
-## Author
-
-Panniru Phanidhar
-
-Electronics and Communication Engineering
+B.Tech – Electronics & Communication Engineering
 
 JNTUH University College of Engineering Rajanna Sircilla
-
-GitHub:
